@@ -113,16 +113,16 @@ func spawn_act2():
 	print(stage)
 	if (stage == 0):
 		parent.spawn_enemy(ENEMY.MANMOTH, SIDE.RIGHT, 1, OFFSET["NORM"])
-		special = weakref(parent.spawn_enemy(ENEMY.SPEARFISCHER, SIDE.RIGHT, 1 , OFFSET["JUMP"]))
+		special = weakref(parent.spawn_fischer())
 		stage+=1
 		return 3
 	elif(stage == 1):
 		parent.spawn_enemy(ENEMY.MANMOTH, SIDE.RIGHT, 1, OFFSET["NORM"])
-		if !special.get_ref(): stage+=1
+		if (not special.get_ref()): stage+=1
 		return 3
 	elif (stage == 2):
 		parent.spawn_enemy(ENEMY.MANMOTH, SIDE.RIGHT, 2, OFFSET["ROLL"])
-		special = weakref(parent.spawn_enemy(ENEMY.SPEARFISCHER, SIDE.RIGHT, 1 , OFFSET["JUMP"]))
+		special = weakref(parent.spawn_fischer())
 		stage+=1
 		return 3
 	elif(stage == 3):
@@ -131,7 +131,7 @@ func spawn_act2():
 		return 3
 	elif (stage == 4):
 		parent.spawn_enemy(ENEMY.MANMOTH, SIDE.RIGHT, 3, OFFSET["ROLL"])
-		special = weakref(parent.spawn_enemy(ENEMY.SPEARFISCHER, SIDE.RIGHT, 1 , OFFSET["JUMP"]))
+		special = weakref(parent.spawn_fischer())
 		stage+=1
 		return 4
 	elif(stage == 5):

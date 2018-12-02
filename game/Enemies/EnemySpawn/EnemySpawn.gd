@@ -2,10 +2,10 @@ extends "res://Global/Object.gd"
 
 onready var SpawnTimer = get_node("SpawnTimer")
 
-var Manmoth = load("res://Enemies/Manmoth/EnemyManmoth.tscn")
-var SpearFischer = load("res://Enemies/Spearfischer/SpearFischer.tscn")
-var Beowulf = load("res://Enemies/Beowulf/Beowulf.tscn")
-var TimeLine = load("res://Enemies/EnemySpawn/SpawnerTimeline.gd").new()
+var Manmoth = preload("res://Enemies/Manmoth/EnemyManmoth.tscn")
+var SpearFischer = preload("res://Enemies/Spearfischer/SpearFischer.tscn")
+var Beowulf = preload("res://Enemies/Beowulf/Beowulf.tscn")
+var TimeLine = preload("res://Enemies/EnemySpawn/SpawnerTimeline.gd").new()
 
 var OFFSET = 128
 
@@ -55,4 +55,11 @@ func spawn_enemy(type, side, num, OFFSET):
 		elif (side == SIDE.RIGHT):
 			inst.set_pos(Vector2(RIGHT_SPAWN.x + (OFFSET * i), RIGHT_SPAWN.y))
 			inst.set_dir(-1)
+	return inst
+	
+func spawn_fischer():
+	var inst = load("res://Enemies/Spearfischer/SpearFischer.tscn").instance()
+	Game.add_child(inst)
+	inst.set_pos(Vector2(RIGHT_SPAWN.x, RIGHT_SPAWN.y))
+	inst.set_dir(-1)
 	return inst

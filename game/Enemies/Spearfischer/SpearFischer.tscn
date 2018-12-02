@@ -3,9 +3,9 @@
 [ext_resource path="res://Enemies/Spearfischer/Scripts/EnemySpearFischer.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Manmoth/Sprites/hitbox.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00000.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00001.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00002.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00004.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00004.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00001.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/Spearfischer/Sprites/spearfischer_00002.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -15,14 +15,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "attack",
 "speed": 5.0
 } ]
 
@@ -74,6 +74,7 @@ autostart = false
 "enemy",
 ]]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 18 )
@@ -96,6 +97,7 @@ _update_shape_index = 0
 "enemy",
 ]]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 14.0389 )

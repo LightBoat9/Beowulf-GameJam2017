@@ -2,23 +2,23 @@
 
 [ext_resource path="res://Enemies/Manmoth/Scripts/EnemyManmoth.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Manmoth/Sprites/hitbox.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00000.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00001.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00002.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00003.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00004.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00004.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00000.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00001.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00002.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/Manmoth/Sprites/Mannmoth_00003.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -50,7 +50,7 @@ offset = Vector2( 0, -5 )
 
 frames = SubResource( 1 )
 animation = "walk"
-frame = 2
+frame = 3
 playing = true
 
 [node name="HurtTimer" type="Timer" parent="."]
